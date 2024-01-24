@@ -36,11 +36,24 @@ except TimeoutException:
 
 table = driver.find_element(By.ID,"statusTable")
 rows = table.find_elements(By.TAG_NAME, "tr") # get all of the rows in the table
+
+lst = []
 for row in rows:
     # Get the columns (all the column 2)        
     col = row.find_elements(By.TAG_NAME, "td") #note: index start from 0, 1 is col 2
+    emp = []
     for c in col:
-        print(c.text)
+        if c.text == '':
+            pass
+        else:
+            emp.append(c.text)
+    lst.append(emp)
+
+lst = [e for e in lst if e != []]
+
+print(lst)
+
+
 
 driver.close()
 

@@ -15,3 +15,6 @@ I'm creating this project to understand the relationship between the usage of wa
 
 
 Log file is LOG.md
+
+## Credits
+- [OpenWeather](https://openweathermap.org/)
